@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grace | Portfolio</title>
+    <meta
+      name="description"
+      content="Frontend Developer and UI/UX Designer portfolio website with modern animations and project showcase."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-bg" aria-hidden="true">
+      <span class="bg-orb orb-a"></span>
+      <span class="bg-orb orb-b"></span>
+      <span class="bg-orb orb-c"></span>
+      <span class="beam beam-left"></span>
+      <span class="beam beam-right"></span>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="#home">GRACE.</a>
+      <nav class="nav-pill" aria-label="Primary navigation">
+        <a href="#home" class="nav-link is-active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#services" class="nav-link">Services</a>
+      </nav>
+      <a class="btn btn-ghost" href="#contact">Hire Me</a>
+    </header>
+
+    <main>
+      <section id="home" class="section hero reveal">
+        <div class="section-pulse" aria-hidden="true"></div>
+        <p class="status-pill">Available For Opportunities</p>
+        <h1>Frontend Developer &amp; UI/UX Designer</h1>
+        <p class="hero-copy">
+          I design and develop user-centered digital experiences that are intuitive,
+          responsive, and built for real-world impact.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Let&rsquo;s Talk</a>
+          <a href="#portfolio" class="btn btn-light">My Works</a>
+        </div>
+      </section>
+
+      <section id="about" class="section about reveal slide-bg">
+        <div class="section-pulse" aria-hidden="true"></div>
+        <div class="sliding-wash" aria-hidden="true"></div>
+        <h2>UI/UX Designer based in the Philippines with a background in frontend development</h2>
+        <p>
+          I am a Computer Engineering graduate focused on crafting intuitive and
+          user-friendly digital experiences. With a strong foundation in UI/UX design,
+          I specialize in building mobile interfaces that are both functional and visually
+          engaging while continuously improving my skills as a designer.
+        </p>
+        <a href="#contact" class="btn btn-light">Download CV</a>
+
+        <div class="about-cards">
+          <article class="glass-card">
+            <h3><span>06+</span> Projects Completed</h3>
+          </article>
+          <article class="glass-card">
+            <h3><span>01</span> Internship</h3>
+            <p>Frontend &amp; UI/UX Designer</p>
+          </article>
+          <article class="glass-card">
+            <h3>UI/UX Design with Mobile Specialization</h3>
+          </article>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section portfolio reveal slide-bg">
+        <div class="section-pulse" aria-hidden="true"></div>
+        <div class="sliding-wash" aria-hidden="true"></div>
+        <h2>Featured Projects</h2>
+        <p>
+          Selected works where I handled interface design, frontend development,
+          and interactive user flow optimization.
+        </p>
+
+        <div class="projects-track" data-track>
+          <article class="project-card">
+            <div class="project-image image-1"></div>
+            <div class="project-body">
+              <h3>PPO Investment Programming System</h3>
+              <p>
+                A digital platform for planning office projects with centralized data and
+                transparent project monitoring.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image image-2"></div>
+            <div class="project-body">
+              <h3>Campus Event Booking Portal</h3>
+              <p>
+                A streamlined interface for booking school venues with responsive forms,
+                validation flow, and schedule visibility.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image image-3"></div>
+            <div class="project-body">
+              <h3>Student Progress Dashboard</h3>
+              <p>
+                An analytics-focused dashboard for visualizing student milestones with
+                clear filtering and modular components.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="slider-controls">
+          <button class="btn btn-ghost slider-btn" type="button" data-prev>Previous</button>
+          <button class="btn btn-ghost slider-btn" type="button" data-next>Next</button>
+        </div>
+      </section>
+
+      <section id="services" class="section services reveal">
+        <h2>Services</h2>
+        <div class="services-grid">
+          <article class="glass-card">
+            <h3>UI/UX Design</h3>
+            <p>Wireframes, prototypes, and intuitive design systems for web and mobile.</p>
+          </article>
+          <article class="glass-card">
+            <h3>Frontend Development</h3>
+            <p>Responsive and performant interfaces using clean HTML, CSS, and JavaScript.</p>
+          </article>
+          <article class="glass-card">
+            <h3>Landing Page Design</h3>
+            <p>Conversion-focused pages with expressive visuals and compelling interactions.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact reveal">
+        <h2>Let&rsquo;s Work Together</h2>
+        <p>
+          Ready to build something impactful? Send me a message and let&rsquo;s talk about
+          your next project.
+        </p>
+        <a href="mailto:your.email@example.com" class="btn btn-primary">Send Email</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Grace. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
