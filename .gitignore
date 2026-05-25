@@ -4,3 +4,6 @@ Thumbs.db
 
 # Editor
 .vscode/
+
+# Local JDK install extracted for development
+oracleJdk-26/
