@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grace | Portfolio</title>
+    <title>Grace | Projects</title>
     <meta
       name="description"
-      content="Frontend Developer and UI/UX Designer portfolio website with modern animations and project showcase."
+      content="Frontend Developer and UI/UX Designer projects website with modern animations and project showcase."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -21,8 +21,8 @@
       <span class="bg-orb orb-a"></span>
       <span class="bg-orb orb-b"></span>
       <span class="bg-orb orb-c"></span>
-      <span class="beam beam-left"></span>
-      <span class="beam beam-right"></span>
+      <div class="upper-bg"></div>
+      <div class="venom-bg"></div>
     </div>
 
     <header class="topbar">
@@ -30,7 +30,7 @@
       <nav class="nav-pill" aria-label="Primary navigation">
         <a href="#home" class="nav-link is-active">Home</a>
         <a href="#about" class="nav-link">About</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#projects" class="nav-link">Projects</a>
         <a href="#services" class="nav-link">Services</a>
       </nav>
       <a class="btn btn-ghost" href="#contact">Hire Me</a>
@@ -38,28 +38,31 @@
 
     <main>
       <section id="home" class="section hero reveal">
-        <div class="section-pulse" aria-hidden="true"></div>
-        <p class="status-pill">Available For Opportunities</p>
-        <h1>Frontend Developer &amp; UI/UX Designer</h1>
-        <p class="hero-copy">
-          I design and develop user-centered digital experiences that are intuitive,
-          responsive, and built for real-world impact.
-        </p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Let&rsquo;s Talk</a>
-          <a href="#portfolio" class="btn btn-light">My Works</a>
+        <div class="hero-content">
+          <p class="status-pill">Available For Opportunities</p>
+          <h1>Frontend Developer &amp; UI/UX Designer</h1>
+          <p class="hero-copy">
+            I design and develop user-centered digital experiences that are intuitive,
+            responsive, and built for real-world impact.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Let&rsquo;s Talk</a>
+            <a href="#projects" class="btn btn-light">My Works</a>
+          </div>
         </div>
       </section>
 
-      <section id="about" class="section about reveal slide-bg">
-        <div class="section-pulse" aria-hidden="true"></div>
+      <section id="about" class="section about reveal">
+        <div class="section-pulse section-pulse-left" aria-hidden="true"></div>
+        <div class="section-pulse section-pulse-right" aria-hidden="true"></div>
         <div class="sliding-wash" aria-hidden="true"></div>
+        <p class="eyebrow">About</p>
         <h2>UI/UX Designer based in the Philippines with a background in frontend development</h2>
         <p>
-          I am a Computer Engineering graduate focused on crafting intuitive and
+          I am a Computer Engineering graduate focused on designing intuitive and
           user-friendly digital experiences. With a strong foundation in UI/UX design,
-          I specialize in building mobile interfaces that are both functional and visually
-          engaging while continuously improving my skills as a designer.
+          I specialize in crafting mobile interfaces that are both functional and visually
+          engaging. I am continuously improving my skills and growing as a designer.
         </p>
         <a href="#contact" class="btn btn-light">Download CV</a>
 
@@ -77,16 +80,50 @@
         </div>
       </section>
 
-      <section id="portfolio" class="section portfolio reveal slide-bg">
-        <div class="section-pulse" aria-hidden="true"></div>
+      <section id="services" class="section services reveal slide-bg">
+        <div class="section-pulse section-pulse-left" aria-hidden="true"></div>
+        <div class="section-pulse section-pulse-right" aria-hidden="true"></div>
         <div class="sliding-wash" aria-hidden="true"></div>
-        <h2>Featured Projects</h2>
+        <p class="eyebrow">Services</p>
+        <h2>Clean design systems and responsive frontend experiences</h2>
         <p>
-          Selected works where I handled interface design, frontend development,
-          and interactive user flow optimization.
+          I create polished interfaces, mobile-first layouts, and interactive frontends
+          that keep the visual language consistent from concept to launch.
         </p>
 
-        <div class="projects-track" data-track>
+        <div class="services-grid">
+          <article class="glass-card">
+            <h3>UI/UX Design</h3>
+            <p>Wireframes, high-fidelity screens, and user flows built for clarity.</p>
+          </article>
+          <article class="glass-card">
+            <h3>Frontend Development</h3>
+            <p>Responsive builds with careful spacing, motion, and visual hierarchy.</p>
+          </article>
+          <article class="glass-card">
+            <h3>Mobile Design</h3>
+            <p>Compact layouts that stay elegant and usable on smaller screens.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section portfolio reveal slide-bg">
+        <div class="section-pulse section-pulse-left" aria-hidden="true"></div>
+        <div class="section-pulse section-pulse-right" aria-hidden="true"></div>
+        <div class="sliding-wash" aria-hidden="true"></div>
+        <p class="eyebrow">Projects</p>
+        <h2>Featured Projects</h2>
+        <p>
+          Selected works where I handled interface design, frontend development, and
+          interactive user flow optimization.
+        </p>
+
+        <div class="projects-stage">
+          <button class="slider-nav slider-nav-left" type="button" data-prev aria-label="Previous project">
+            Prev
+          </button>
+
+          <div class="projects-track" data-track>
           <article class="project-card">
             <div class="project-image image-1"></div>
             <div class="project-body">
@@ -98,7 +135,7 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card project-card-featured">
             <div class="project-image image-2"></div>
             <div class="project-body">
               <h3>Campus Event Booking Portal</h3>
@@ -119,29 +156,11 @@
               </p>
             </div>
           </article>
-        </div>
+          </div>
 
-        <div class="slider-controls">
-          <button class="btn btn-ghost slider-btn" type="button" data-prev>Previous</button>
-          <button class="btn btn-ghost slider-btn" type="button" data-next>Next</button>
-        </div>
-      </section>
-
-      <section id="services" class="section services reveal">
-        <h2>Services</h2>
-        <div class="services-grid">
-          <article class="glass-card">
-            <h3>UI/UX Design</h3>
-            <p>Wireframes, prototypes, and intuitive design systems for web and mobile.</p>
-          </article>
-          <article class="glass-card">
-            <h3>Frontend Development</h3>
-            <p>Responsive and performant interfaces using clean HTML, CSS, and JavaScript.</p>
-          </article>
-          <article class="glass-card">
-            <h3>Landing Page Design</h3>
-            <p>Conversion-focused pages with expressive visuals and compelling interactions.</p>
-          </article>
+          <button class="slider-nav slider-nav-right" type="button" data-next aria-label="Next project">
+            Next
+          </button>
         </div>
       </section>
 
