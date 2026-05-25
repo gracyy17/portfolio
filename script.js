@@ -2,8 +2,7 @@ const revealElements = document.querySelectorAll('.reveal');
 const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('main .section');
 const track = document.querySelector('[data-track]');
-const nextButton = document.querySelector('[data-next]');
-const prevButton = document.querySelector('[data-prev]');
+const projectCards = track ? Array.from(track.querySelectorAll('.project-card')) : [];
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -37,16 +36,21 @@ const activateNavLink = () => {
   });
 };
 
-if (track && nextButton && prevButton) {
-  const scrollAmount = () => Math.max(track.clientWidth * 0.82, 320);
+if (track && projectCards.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  let currentIndex = 0;
 
-  nextButton.addEventListener('click', () => {
-    track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
-  });
+  const slideTo = (index) => {
+    const card = projectCards[index];
 
-  prevButton.addEventListener('click', () => {
-    track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
-  });
+    if (card) {
+      card.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+    }
+  };
+
+  window.setInterval(() => {
+    currentIndex = (currentIndex + 1) % projectCards.length;
+    slideTo(currentIndex);
+  }, 3600);
 }
 
 window.addEventListener('scroll', activateNavLink, { passive: true });
