@@ -40,12 +40,14 @@ if (track && projectCards.length > 1 && !window.matchMedia('(prefers-reduced-mot
   let currentIndex = 0;
 
   const slideTo = (index) => {
-    const card = projectCards[index];
+    const cardWidth = projectCards[0].getBoundingClientRect().width;
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    const offset = (cardWidth + gap) * index;
 
-    if (card) {
-      card.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
-    }
+    track.style.transform = `translateX(-${offset}px)`;
   };
+
+  slideTo(currentIndex);
 
   window.setInterval(() => {
     currentIndex = (currentIndex + 1) % projectCards.length;
