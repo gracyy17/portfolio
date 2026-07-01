@@ -11,7 +11,6 @@ export function AboutSection({
   return (
     <section id="about" ref={sectionRef} className={className}>
       <SectionBackdrop />
-      <p className="eyebrow">About</p>
 
       <div className="about-layout">
         <div className="about-profile">
@@ -47,8 +46,8 @@ export function AboutSection({
             projects, I build interfaces that are functional, intuitive, and visually
             engaging.
           </p>
-          <a href={cvUrl} className="btn btn-light about-cta">
-            Download CV
+          <a href={cvUrl} className="btn btn-light about-cta" target="_blank" rel="noreferrer">
+            View CV
           </a>
         </div>
       </div>

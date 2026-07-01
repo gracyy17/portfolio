@@ -16,7 +16,6 @@ export function HeroSection({ sectionRef, className }) {
             My Works
           </a>
         </div>
-        <p className="portfolio-note">Open to frontend, UI/UX, and mobile opportunities.</p>
       </div>
     </section>
   );
