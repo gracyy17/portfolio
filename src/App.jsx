@@ -13,8 +13,8 @@ import { TechStackShowcase } from './components/TechStackShowcase.jsx';
 const navigationItems = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
-  { id: 'projects', label: 'Projects' },
   { id: 'tech-stack', label: 'Tech Stack' },
+  { id: 'projects', label: 'Projects' },
 ];
 
 const sectionOrder = ['home', 'about', 'tech-stack', 'projects', 'contact'];
