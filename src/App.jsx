@@ -88,8 +88,8 @@ const featuredProjects = [
   },
 ];
 
-const portraitUrl = new URL('./bg design/formal.png', import.meta.url).href;
-const cvUrl = new URL('../SEPTIMO-RESUME.pdf', import.meta.url).href;
+import portraitUrl from './bg design/formal.png';
+import cvUrl from '../SEPTIMO-RESUME.pdf';
 
 export default function App() {
   const sectionRefs = useRef({});
