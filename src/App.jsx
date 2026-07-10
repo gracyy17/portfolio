@@ -9,6 +9,7 @@ import { ProjectsSection } from './components/ProjectsSection.jsx';
 import { SiteFooter } from './components/SiteFooter.jsx';
 import { SiteHeader } from './components/SiteHeader.jsx';
 import { TechStackShowcase } from './components/TechStackShowcase.jsx';
+import { ProjectModal } from './components/ProjectModal.jsx';
 
 const navigationItems = [
   { id: 'home', label: 'Home' },
@@ -62,29 +63,33 @@ const featuredProjects = [
     title: 'Dormitory Management Website',
     description:
       'A React.js and Node.js/Express.js system for managing tenants and room allocation with responsive interfaces.',
+    designs: ['https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200&h=800'],
   },
   {
     imageClassName: 'image-2',
     title: 'H2Know Mobile Application',
     description:
       'A Flutter and Firebase mobile app for water monitoring, notifications, and real-time user awareness.',
+    designs: ['https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&q=80&w=1200&h=800'],
   },
   {
     imageClassName: 'image-3',
     title: 'Video Streaming Website',
     description:
       'A web-based streaming platform with video upload and playback features, built with responsive layouts and smooth interactions.',
+    designs: ['https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1200&h=800'],
   },
   {
     imageClassName: 'image-4',
     title: 'PPO SYSTEM',
     description:
       'The Planning and Development Office (PDO) Investment Programming System is a digital platform designed to streamline the planning, prioritization, and monitoring of development projects. It centralizes project data, improves transparency, and supports data-driven decision-making for efficient resource allocation.',
+    designs: ['https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200&h=800'],
   },
 ];
 
 const portraitUrl = new URL('./bg design/formal.png', import.meta.url).href;
-const cvUrl = new URL('../SEPTIMO - RESUME.pdf', import.meta.url).href;
+const cvUrl = new URL('../SEPTIMO-RESUME.pdf', import.meta.url).href;
 
 export default function App() {
   const sectionRefs = useRef({});
@@ -95,6 +100,7 @@ export default function App() {
   const [projectIndex, setProjectIndex] = useState(featuredProjects.length); // Start at second set
   const [projectOffset, setProjectOffset] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
+  const [selectedProject, setSelectedProject] = useState(null);
   
   // Create 3 sets for infinite scrolling
   const displayProjects = [...featuredProjects, ...featuredProjects, ...featuredProjects];
@@ -274,6 +280,7 @@ export default function App() {
           bindProjectCardRef={bindProjectCardRef}
           projectIndex={projectIndex}
           isTransitioning={isTransitioning}
+          onProjectClick={setSelectedProject}
         />
 
         <ContactSection
@@ -283,6 +290,13 @@ export default function App() {
       </main>
 
       <SiteFooter />
+
+      {selectedProject && (
+        <ProjectModal 
+          project={selectedProject} 
+          onClose={() => setSelectedProject(null)} 
+        />
+      )}
     </>
   );
 }

@@ -1,12 +1,18 @@
 import { SectionBackdrop } from './SectionBackdrop.jsx';
 
-function ProjectCard({ project, cardRef, isActive, isVisible }) {
+function ProjectCard({ project, cardRef, isActive, isVisible, onClick }) {
   return (
-    <article ref={cardRef} className={`project-card ${isActive ? 'is-active' : ''} ${!isVisible ? 'is-hidden' : ''}`}>
+    <article 
+      ref={cardRef} 
+      className={`project-card ${isActive ? 'is-active' : ''} ${!isVisible ? 'is-hidden' : ''}`}
+      onClick={isVisible ? () => onClick(project) : undefined}
+      style={{ cursor: isVisible ? 'pointer' : 'default' }}
+    >
       <div className={`project-image ${project.imageClassName}`} />
       <div className="project-body">
         <h3>{project.title}</h3>
         <p>{project.description}</p>
+        <span className="view-designs-prompt">Click to view designs</span>
       </div>
     </article>
   );
@@ -21,6 +27,7 @@ export function ProjectsSection({
   bindProjectCardRef,
   projectIndex,
   isTransitioning,
+  onProjectClick,
 }) {
   return (
     <section id="projects" ref={sectionRef} className={className}>
@@ -53,6 +60,7 @@ export function ProjectsSection({
                 cardRef={bindProjectCardRef(projectCardIndex)}
                 isActive={projectCardIndex === projectIndex}
                 isVisible={isVisible}
+                onClick={onProjectClick}
               />
             );
           })}
