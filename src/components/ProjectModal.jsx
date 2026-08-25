@@ -9,23 +9,27 @@ export function ProjectModal({ project, onClose }) {
         </button>
         
         <div className="modal-header">
-          <h2>{project.title}</h2>
-          <p>{project.description}</p>
-        </div>
-
-        <div className="modal-gallery">
-          {project.designs && project.designs.length > 0 ? (
-            project.designs.map((designUrl, index) => (
-              <div key={index} className="modal-design-wrapper">
-                <img src={designUrl} alt={`${project.title} design ${index + 1}`} loading="lazy" />
+        <h2>{project.title}</h2>
+      </div>
+      <div className="modal-gallery">
+        {project.designs && project.designs.length > 0 ? (
+          project.designs.map((design, index) => (
+            <div key={index} className={`modal-design-item ${index % 2 === 0 ? 'layout-left' : 'layout-right'}`}>
+              <div className="modal-design-image">
+                <img src={design.src} alt={design.title} loading="lazy" />
               </div>
-            ))
-          ) : (
-            <div className="modal-empty-state">
-              <p>Detailed designs coming soon.</p>
+              <div className="modal-design-text">
+                <h3>{design.title}</h3>
+                <p>{design.description}</p>
+              </div>
             </div>
-          )}
-        </div>
+          ))
+        ) : (
+          <div className="modal-empty-state">
+            <p>Design previews coming soon.</p>
+          </div>
+        )}
+      </div>
       </div>
     </div>
   );

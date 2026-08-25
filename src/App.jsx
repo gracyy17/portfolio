@@ -63,30 +63,88 @@ const featuredProjects = [
     title: 'Dormitory Management Website',
     description:
       'A React.js and Node.js/Express.js system for managing tenants and room allocation with responsive interfaces.',
-    designs: ['https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200&h=800'],
+    designs: [
+      { src: dormDashboard, title: 'Dashboard Overview', description: 'A high-level view of available rooms, monthly revenue, and recent activity.' },
+      { src: dormRooms, title: 'Rooms Management', description: 'Interface for managing building layouts, room capacity, and electric bill splitting.' },
+      { src: dormTenants, title: 'Tenants Management', description: 'Track tenant accounts, assigned rooms, and outstanding payment status.' },
+      { src: dormPayments, title: 'Payments Review Queue', description: 'Admin dashboard for reviewing tenant receipt uploads and verifying payments.' },
+      { src: dormMaintenance, title: 'Maintenance Management', description: 'Track tenant repair requests and monitor room maintenance status.' },
+      { src: dormReports, title: 'Financial & Occupancy Reports', description: 'Generate detailed dues status reports and room occupancy statistics.' },
+      { src: dormUsers, title: 'Users Management', description: 'Manage system access levels, tenant passwords, and administrative accounts.' }
+    ],
   },
   {
     imageClassName: 'image-2',
     title: 'H2Know Mobile Application',
     description:
       'A Flutter and Firebase mobile app for water monitoring, notifications, and real-time user awareness.',
-    designs: ['https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&q=80&w=1200&h=800'],
+    designs: [
+      { src: h2knowSignin, title: 'Secure Sign In', description: 'Authentication screen with email and Google Sign-In support.' },
+      { src: h2knowWelcome, title: 'Welcome Tutorial', description: 'Onboarding screen explaining the mobile-based water quality monitoring system.' },
+      { src: h2knowDashboard, title: 'Live Dashboard', description: 'Real-time monitoring interface displaying vital water metrics like TDS, Temp, Turbidity, pH, DO, and ORP.' },
+      { src: h2knowResult, title: 'Results Analysis', description: 'Detailed breakdown of raw sensor data compared against acceptable threshold ranges to determine compliance.' },
+      { src: h2knowSaveResult, title: 'Historical Records', description: 'Archive of previous water quality readings categorized by testing location and date.' },
+      { src: h2knowMenu, title: 'Application Menu', description: 'Quick access to profile settings, saved results, and device configuration.' },
+      { src: h2knowUserManual, title: 'Built-in Manual', description: 'In-app documentation providing users with setup instructions and device connectivity guides.' },
+      { src: h2knowWifiSetup, title: 'Device Provisioning', description: 'Step-by-step interface for connecting the ESP32 hardware to a local Wi-Fi network.' },
+      { src: h2knowOverview, title: 'System Overview', description: 'A consolidated view of device connectivity status and overall water compliance score.' },
+      { src: h2knowDashboardOnline, title: 'Online Monitoring', description: 'The main dashboard interface actively syncing live data from the hardware sensors.' }
+    ],
   },
   {
     imageClassName: 'image-3',
     title: 'Video Streaming Website',
     description:
       'A web-based streaming platform with video upload and playback features, built with responsive layouts and smooth interactions.',
-    designs: ['https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1200&h=800'],
+    designs: [
+      { src: strikeflixWatch, title: 'Video Player Interface', description: 'A fully-featured video playback screen with episode navigation and layout toggles.' },
+      { src: strikeflixRegister, title: 'User Registration', description: 'A clean, distraction-free sign-up form customized with the brand\'s vibrant yellow accent.' },
+      { src: strikeflixLogin, title: 'Engaging Login Screen', description: 'Authentication page featuring a dynamic, high-quality anime background to immerse users.' }
+    ],
   },
   {
     imageClassName: 'image-4',
     title: 'PPO SYSTEM',
     description:
       'The Planning and Development Office (PDO) Investment Programming System is a digital platform designed to streamline the planning, prioritization, and monitoring of development projects. It centralizes project data, improves transparency, and supports data-driven decision-making for efficient resource allocation.',
-    designs: ['https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200&h=800'],
+    designs: [
+      { src: ppoDashboard, title: 'Investment Dashboard', description: 'Visual analytics featuring a total investment cost distribution chart and project status summaries.' },
+      { src: ppoInstitutes, title: 'Institute Directory', description: 'Categorized list of university institutes and their respective number of active projects.' },
+      { src: ppoCompleteList, title: 'Complete Project Masterlist', description: 'A comprehensive table tracking all projects, fund sources, implementation periods, and budgets.' },
+      { src: ppoAccounts, title: 'Account Management', description: 'Administrative view for managing user accounts and institute assignments.' },
+      { src: ppoEvaluation, title: 'Project Evaluation', description: 'Interface for reviewing proposed projects, tracking readiness, and updating status from proposed to evaluated.' }
+    ],
   },
 ];
+
+import h2knowSignin from './images/h2know/signin.png';
+import h2knowWelcome from './images/h2know/welcome.png';
+import h2knowDashboard from './images/h2know/dashboard.png';
+import h2knowResult from './images/h2know/result.png';
+import h2knowSaveResult from './images/h2know/save-result.png';
+import h2knowMenu from './images/h2know/menu.png';
+import h2knowUserManual from './images/h2know/user-manual.png';
+import h2knowWifiSetup from './images/h2know/wifi-setup.png';
+import h2knowOverview from './images/h2know/overview.png';
+import h2knowDashboardOnline from './images/h2know/dashboard-online.png';
+
+import strikeflixWatch from './images/strikeflix/watch.png';
+import strikeflixRegister from './images/strikeflix/register.png';
+import strikeflixLogin from './images/strikeflix/login.png';
+
+import dormDashboard from './images/dormitory/dashboard.png';
+import dormRooms from './images/dormitory/rooms.png';
+import dormTenants from './images/dormitory/tenants.png';
+import dormPayments from './images/dormitory/payments.png';
+import dormMaintenance from './images/dormitory/maintenance.png';
+import dormReports from './images/dormitory/reports.png';
+import dormUsers from './images/dormitory/users.png';
+
+import ppoDashboard from './images/ppo/dashboard.png';
+import ppoInstitutes from './images/ppo/institutes.png';
+import ppoCompleteList from './images/ppo/complete-list.png';
+import ppoAccounts from './images/ppo/accounts.png';
+import ppoEvaluation from './images/ppo/evaluation.png';
 
 import portraitUrl from './bg design/formal.png';
 import cvUrl from '../SEPTIMO-RESUME.pdf';
